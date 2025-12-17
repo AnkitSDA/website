@@ -27,10 +27,12 @@ exports.login = (req, res) => {
       }
 
       const token = jwt.sign(
-        { id: admin.id, email: admin.email },
-        process.env.JWT_SECRET,
-        { expiresIn: "1d" }
-      );
+  { id: admin.id, email: admin.email },
+  process.env.JWT_SECRET,
+  { expiresIn: "30d" }
+);
+
+      
 
       res.json({
         message: "Login successful",
