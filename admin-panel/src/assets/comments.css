@@ -1,0 +1,133 @@
+.page-container {
+  padding: 24px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background: #f8fafc;
+  padding: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.table td {
+  padding: 12px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.table tr:hover {
+  background: #f9fafb;
+}
+
+/* COMMENT TEXT */
+.comment-text {
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+/* STATUS BADGE */
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.badge.approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* ACTION BUTTON */
+.action-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+
+/* STATUS BADGES */
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.badge.approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* ACTION BUTTONS */
+.action-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.approve-btn {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.reject-btn {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #991b1b;
+}
