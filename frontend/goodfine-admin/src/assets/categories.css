@@ -1,0 +1,161 @@
+.page-container {
+  padding: 24px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* FORM */
+.category-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.category-form textarea {
+  grid-column: span 2;
+  resize: vertical;
+}
+
+.category-form button {
+  grid-column: span 4;
+}
+
+/* INPUTS */
+.category-form input,
+.category-form textarea,
+.category-form select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+}
+
+.category-form input:focus,
+.category-form textarea:focus,
+.category-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* LABEL */
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* BUTTON */
+.primary-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #1e40af;
+}
+
+/* PREVIEW */
+.preview-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  margin-top: 8px;
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background: #f8fafc;
+  padding: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.table td {
+  padding: 12px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}
+
+.table tr:hover {
+  background: #f9fafb;
+}
+
+.table-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* STATUS BADGE */
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ACTION BUTTONS */
+.action-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.edit-btn {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #991b1b;
+}
