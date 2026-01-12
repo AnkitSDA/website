@@ -1,31 +1,79 @@
 const express = require("express");
 const router = express.Router();
-const auth = require("../middleware/authMiddleware");
+
 const productController = require("../controllers/productController");
+const uploadProduct = require("../middleware/uploadProduct");
+// const auth = require("../middleware/authMiddleware");
 
+/* =====================================================
+   ADMIN ROUTES (JWT PROTECTED)
+   Used ONLY by React Admin Panel
+===================================================== */
 
-const {
-  createProduct,
-  getProducts,
-  getProductBySlug,
-  getProductsByCategory,
-  updateProduct,
-  deleteProduct
-} = require("../controllers/productController");
+// ✅ BULK DELETE — MUST BE FIRST
+router.delete(
+  "/bulk-delete",
+  
+  productController.bulkDeleteProducts
+);
 
-// Admin
-router.post("/", auth, createProduct);
-router.put("/:id", auth, updateProduct);
-router.delete("/:id", auth, deleteProduct);
-router.put("/:id", auth, productController.updateProduct);
-router.get("/slug/:slug", productController.getProductBySlug);
-router.get("/featured", productController.getFeaturedProducts);
+// CREATE PRODUCT
+router.post(
+  "/",
+  
+  uploadProduct.single("image"),
+  productController.createProduct
+);
 
-// Public
-router.get("/", getProducts);
-router.get("/category/:slug", getProductsByCategory);
-router.get("/:slug", getProductBySlug);
-router.get("/:id/details", productController.getProductWithImages);
+// GET ALL PRODUCTS (ADMIN LIST)
+router.get(
+  "/",
+  
+  productController.getProducts
+);
 
+// GET PRODUCT BY ID (ADMIN EDIT)
+router.get(
+  "/:id",
+  
+  productController.getProductById
+);
+
+// UPDATE PRODUCT
+router.put(
+  "/:id",
+  
+  uploadProduct.single("image"),
+  productController.updateProduct
+);
+
+// DELETE SINGLE PRODUCT — MUST BE LAST
+router.delete(
+  "/:id",
+  
+  productController.deleteProduct
+);
+
+/* =====================================================
+   PUBLIC ROUTES (NO AUTH — WEBSITE)
+===================================================== */
+
+// ✅ ALL PRODUCTS (WEBSITE LISTING)
+router.get(
+  "/public/list",
+  productController.getProducts
+);
+
+// ✅ FEATURED PRODUCTS
+router.get(
+  "/featured/list",
+  productController.getFeaturedProducts
+);
+
+// ✅ PRODUCTS BY CATEGORY (SLUG BASED)
+router.get(
+  "/category/:slug",
+  productController.getProductsByCategory
+);
 
 module.exports = router;

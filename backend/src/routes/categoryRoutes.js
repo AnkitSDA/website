@@ -1,18 +1,40 @@
 const express = require("express");
 const router = express.Router();
+
+const upload = require("../middleware/uploadCategory");
 const auth = require("../middleware/authMiddleware");
+
 const {
-  createCategory,
   getCategories,
-  getCategoryBySlug,
+  createCategory,
   updateCategory,
-  deleteCategory
+  deleteCategory,
 } = require("../controllers/categoryController");
 
-router.post("/", auth, createCategory);   // 👈 THIS IS REQUIRED
+// ✅ PUBLIC
 router.get("/", getCategories);
-router.get("/:slug", getCategoryBySlug);
-router.put("/:id", auth, updateCategory);
+
+// 🔒 ADMIN (UPLOAD FIRST → THEN CONTROLLER)
+router.post(
+  "/",
+  auth,
+  upload.fields([
+    { name: "image", maxCount: 1 },
+    { name: "banner_image", maxCount: 1 },
+  ]),
+  createCategory
+);
+
+router.put(
+  "/:id",
+  auth,
+  upload.fields([
+    { name: "image", maxCount: 1 },
+    { name: "banner_image", maxCount: 1 },
+  ]),
+  updateCategory
+);
+
 router.delete("/:id", auth, deleteCategory);
 
 module.exports = router;
