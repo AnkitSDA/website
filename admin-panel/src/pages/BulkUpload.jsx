@@ -1,6 +1,6 @@
 import { useState } from "react";
 import api from "../api/axios";
-import "../assets/bulkUpload.css";
+import "../assets/BulkUpload.css";
 
 const BulkUpload = () => {
   const [type, setType] = useState("categories");

@@ -11,8 +11,7 @@ import AddProduct from "./pages/AddProduct";
 import EditProduct from "./pages/EditProduct";
 import Leads from "./pages/Leads";
 import BulkUpload from "./pages/BulkUpload";
-
-
+import WhatsAppMarketing from "./pages/WhatsAppMarketing";
 
 function App() {
   return (
@@ -49,10 +48,7 @@ function App() {
       <Route path="/products/edit/:id" element={<EditProduct />} />
       <Route path="/leads" element={<Leads />} />
       <Route path="/bulk-upload" element={<BulkUpload />} />
-
-      
-
-
+      <Route path="/whatsapp-marketing" element={<WhatsAppMarketing />} />
 
       </Routes>
     </BrowserRouter>

@@ -58,9 +58,7 @@ function AdminLayout() {
           <Link to="/products" style={linkStyle}>Products</Link>
           <Link to="/leads" style={linkStyle}>Leadsform</Link>
           <Link to="/bulk-upload" style={linkStyle}>CSV File Upload</Link>
-
-
-
+          <Link to="/whatsapp-marketing" style={linkStyle}>WhatsApp Marketing</Link>
 
           <button
             onClick={handleLogout}
