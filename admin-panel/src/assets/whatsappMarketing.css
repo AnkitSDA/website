@@ -1,0 +1,123 @@
+.wa-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.wa-header h2 {
+  margin-bottom: 8px;
+}
+
+.wa-header p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.wa-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.wa-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.wa-card h3 {
+  margin-top: 0;
+}
+
+.wa-card label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.wa-card input,
+.wa-card textarea,
+.wa-card select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.wa-stats {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.wa-search {
+  margin-bottom: 12px;
+}
+
+.wa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 65vh;
+  overflow: auto;
+}
+
+.wa-item {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.wa-item p {
+  margin: 4px 0;
+}
+
+.wa-message {
+  font-size: 13px;
+  color: #374151;
+  white-space: pre-wrap;
+  background: #f3f4f6;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.wa-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.wa-actions button,
+.wa-actions a {
+  border: none;
+  background: #10b981;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.wa-actions button {
+  background: #374151;
+}
+
+.wa-empty {
+  color: #6b7280;
+}
+
+@media (max-width: 1100px) {
+  .wa-grid {
+    grid-template-columns: 1fr;
+  }
+}
